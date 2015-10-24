@@ -44,7 +44,7 @@ update user
 }
 
 func test(t *testing.T, expected, logContents string, column uint8) {
-	found := ExtractColumn(logContents, 1)
+	found := ExtractColumn(logContents, column)
 
 	if found != expected {
 		t.Errorf("Expected\n---\n%s\n---\nbut found\n---\n%s\n---\n", expected, found)
